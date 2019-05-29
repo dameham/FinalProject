@@ -1,5 +1,5 @@
-# FinalProject#
-Z-Score Calculator
+#Z-Score Calculator#
+
 This program is designed to take in user input and calculate the Z-Score, which can be done by plugging in the user's inputed values into an equation. This Z-Score is then used to find a specific value of a relatively large 2D array that contains the probability or "p-value" of the Z-Score that was inputted. This program is applicable in many different situations to do with statistics and math in general. 
 
 ### Difficulties or opportunities I encountered along the way.
