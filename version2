@@ -94,11 +94,11 @@ double[][] Standard= { {100, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 100},
 		 {38, .99993, .99993, .99993, .99994, .99994, .99994, .99994, .99995, .99995, .99995},
 		 {39, .99995, .99995, .99996, .99996, .99996, .99996, .99996, .99996, .99997, .99997 }
 		 };
-System.out.println("Enter the population mean:");
+System.out.println("Enter the population mean(μ):");
 PopMean=scan.nextDouble();
-System.out.println("Enter your point of interest:");
+System.out.println("Enter your raw score(X):");
 Parameter= scan.nextDouble();
-System.out.println("Enter the standard deviation:");
+System.out.println("Enter the standard deviation(σ):");
 StandardDev=scan.nextDouble();
 Z=(Parameter-PopMean)/StandardDev;
 Z=Math.round(Z * 100.0) / 100.0;
