@@ -1,11 +1,17 @@
 package ZScoreCalculator;
-
+import javax.swing.JFrame;
 import java.util.Scanner;
-
+import java.awt.Rectangle;
 public class ZScoreCalculator {
  
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		JFrame window = new JFrame();
+		window.setSize(640,480);
+		window.setTitle("Curve");
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setVisible(true);
+		// Rectangle rect = new Rectangle(5,10, 300, 100);
 Scanner scan= new Scanner(System.in);
 double PopMean;
 double Parameter;
@@ -94,11 +100,11 @@ double[][] Standard= { {100, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 100},
 		 {38, .99993, .99993, .99993, .99994, .99994, .99994, .99994, .99995, .99995, .99995},
 		 {39, .99995, .99995, .99996, .99996, .99996, .99996, .99996, .99996, .99997, .99997 }
 		 };
-System.out.println("Enter the population mean:");
+System.out.println("Enter the population mean(μ):");
 PopMean=scan.nextDouble();
-System.out.println("Enter your point of interest:");
+System.out.println("Enter your raw score(X):");
 Parameter= scan.nextDouble();
-System.out.println("Enter the standard deviation:");
+System.out.println("Enter the standard deviation(σ):");
 StandardDev=scan.nextDouble();
 Z=(Parameter-PopMean)/StandardDev;
 Z=Math.round(Z * 100.0) / 100.0;
@@ -111,19 +117,19 @@ else if (Z>=4) {
 	System.out.println("Your P-Value is approximately 1\n");
 }
 else {
-	double end;
+
 	double front;
 	double end1;
-	double end2;
 
-	double tester;
+
+
 	Z=Z*100;
 	
 	end1=Math.abs(Z%10);
-	end=Z%10;
+
 	front=(Z-end1)/10;
-	int r=0;
-	int c=0;
+	
+
 /*	//for(int i=0;i<=Standard.length-1;i++) {
 		if (Standard[i][0]==front) {
 		r=i;
